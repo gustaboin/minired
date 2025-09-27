@@ -8,10 +8,10 @@ Ideal para practicar React Router, manejo de estado básico y persistencia local
 ## 🚀 Funcionalidades
 
 - ✅ **Registro/Inicio de sesión falso** (sin backend)
-  ![alt text](/minired/src/assets/image.png)
-  ![alt text](/minired/src/assets/image-1.png)
+  ![alt text](images/image.png)
+  ![alt text](images/image-1.png)
 - ✅ **Crear, ver y borrar estados** (posts)
-  ![alt text](/minired/src/assets/image-2.png)
+  ![alt text](images/image-2.png)
 - ✅ **Persistencia en LocalStorage**
 - ✅ **Diseño responsive y sencillo**
 
