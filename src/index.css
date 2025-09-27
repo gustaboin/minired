@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #4c9aff;
+  color: white;
+  padding: 10px 20px;
+}
+
+.login-form,
+.estado-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+}
+
+.login-page,
+.home-page {
+  max-width: 500px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.estado-list {
+  padding: 10px;
+}
+
+.estado-item {
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.auth-form {
+  padding: 10px;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.auth-tabs button {
+  flex: 1;
+  padding: 8px;
+  background: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.auth-tabs button.active {
+  background: #4c9aff;
+  color: white;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+textarea {
+  resize: vertical;
+  width: 460px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
