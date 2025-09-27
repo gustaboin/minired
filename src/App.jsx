@@ -8,7 +8,7 @@ export default function App()
   const user = getUser();
 
   return (
-    <Router>
+    <Router basename='/minired'>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route
