@@ -1,33 +1,15 @@
-/*
 import React from 'react';
+import '../Styles/EstadoList.css';
 
 export default function EstadoList({ estados })
 {
     return (
-        <div className="estado-list">
-            {estados.map((est, idx) => (
-                <div key={idx} className="estado-item">
-                    <strong>{est.user}</strong>: {est.text}
-                </div>
-            ))}
-        </div>
-    );
-}
-
-*/
-
-/* solo renderiza */
-import React from 'react';
-
-export default function EstadoList({ estados })
-{
-    return (
-        <div className="estado-list">
+        <div className='post-list'>
             {estados.map((estado, i) => (
-                <div key={i} className="estado">
-                    <strong>{estado.user}</strong>
-                    <p>{estado.text}</p>
-                    <small>{new Date(estado.date).toLocaleString()}</small>
+                <div key={i} className='post-card'>
+                    <strong className='post-user'>{estado.user}</strong>
+                    <p className='post-text'>{estado.text}</p>
+                    <small className="post-date">{new Date(estado.date).toLocaleString()}</small>
                 </div>
             ))}
         </div>

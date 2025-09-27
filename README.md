@@ -12,8 +12,6 @@ Ideal para practicar React Router, manejo de estado básico y persistencia local
   ![alt text](image-1.png)
 - ✅ **Crear, ver y borrar estados** (posts)
   ![alt text](image-2.png)
-  ![alt text](image-3.png)
-
 - ✅ **Persistencia en LocalStorage**
 - ✅ **Diseño responsive y sencillo**
 

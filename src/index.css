@@ -1,16 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  background: #f4f6f8;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .header {
+  background: linear-gradient(90deg, #4c9aff, #6c63ff);
+  color: #fff;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
-  background: #4c9aff;
-  color: white;
-  padding: 10px 20px;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+header .header-username {
+  margin-right: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .login-form,
@@ -29,15 +44,6 @@ body {
   padding: 20px;
   border-radius: 6px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.estado-list {
-  padding: 10px;
-}
-
-.estado-item {
-  padding: 5px 0;
-  border-bottom: 1px solid #ccc;
 }
 
 .auth-form {
@@ -77,6 +83,20 @@ body {
 textarea {
   resize: vertical;
   width: 460px;
-  padding: 10px 20px;
+  padding: 10px 19px;
   font-size: 1em;
+}
+
+button {
+  background: #4c9aff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #367edc;
 }
