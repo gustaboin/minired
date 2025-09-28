@@ -22,13 +22,13 @@ export default function ConfirmModal({ onConfirm, onCancel })
 
                 <div className="modal-actions">
                     <button
-                        className="btn btn-secondary"
+                        className="btn"
                         onClick={onCancel}
                     >
                         Cancelar
                     </button>
                     <button
-                        className="btn btn-delete"
+                        className="btn btn-logout"
                         onClick={onConfirm}
                     >
                         Sí, Borrar Permanentemente
