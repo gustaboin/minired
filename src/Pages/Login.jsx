@@ -1,27 +1,4 @@
-/*
-import React from 'react';
-import { login } from '../utils/auth.js';
-import LoginForm from '../components/LoginForm.jsx';
-import { useNavigate } from 'react-router-dom';
 
-export default function Login()
-{
-    const navigate = useNavigate();
-
-    function handleLogin(username)
-    {
-        login(username);
-        navigate('/');
-    }
-
-    return (
-        <div className="login-page">
-            <h2>Iniciar sesión</h2>
-            <LoginForm onLogin={handleLogin} />
-        </div>
-    );
-}
-*/
 
 import React from 'react';
 import { register, login } from '../utils/auth.js';
@@ -32,9 +9,9 @@ export default function Login()
 {
     const navigate = useNavigate();
 
-    function handleRegister(username, password, setError)
+    function handleRegister(username, password, role, setError)
     {
-        const result = register(username, password);
+        const result = register(username, password, role);
         if (result.ok)
         {
             navigate('/');
@@ -58,7 +35,7 @@ export default function Login()
 
     return (
         <div className="login-page">
-            <h2>MiniRed</h2>
+            <h1>MiniRed</h1>
             <AuthForm onLogin={handleLogin} onRegister={handleRegister} />
         </div>
     );

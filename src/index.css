@@ -80,14 +80,35 @@ h1 {
   font-size: 0.9em;
 }
 
-textarea {
-  resize: vertical;
-  width: 460px;
-  padding: 10px 19px;
-  font-size: 1em;
+.form-post {
+  display: flex;
+  /*flex-direction: column;*/
+  margin-top: 8px;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
-button {
+.form-post .textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 16px 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: none;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.textarea:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.3);
+}
+
+
+
+.btn {
   background: #4c9aff;
   color: #fff;
   padding: 8px 16px;
@@ -97,6 +118,22 @@ button {
   transition: background 0.3s ease;
 }
 
-button:hover {
-  background: #367edc;
+.btn:hover {
+  background: #357ae8;
+}
+
+.btn-logout {
+  background: #dc3545;
+}
+
+.btn-logout:hover {
+  background: #c82333;
+}
+
+.btn-login {
+  background: #28a745;
+}
+
+.btn-login:hover {
+  background: #1e7e34;
 }

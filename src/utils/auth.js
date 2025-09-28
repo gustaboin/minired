@@ -1,26 +1,3 @@
-/*
-
-import { storage } from './storage.js';
-
-const USER_KEY = 'miniRedUser';
-
-export function login(username)
-{
-    storage.set(USER_KEY, { username });
-}
-
-export function logout()
-{
-    storage.remove(USER_KEY);
-}
-
-export function getUser()
-{
-    return storage.get(USER_KEY);
-}
-
-*/
-
 import { storage } from './storage.js';
 
 const USERS_KEY = 'miniRedUsers';
@@ -37,7 +14,7 @@ function setUsers(users)
 }
 
 // registrar un nuevo usuario
-export function register(username, password)
+export function register(username, password, role)
 {
     const users = getUsers();
     // chequear si ya existe
@@ -45,10 +22,14 @@ export function register(username, password)
     {
         return { ok: false, message: 'Usuario ya existe' };
     }
-    users.push({ username, password });
+
+    // agrego esto paara definir un usuario como admin y pueda borrar todo el feed
+    // const role = username.toLowerCase() === 'admin' ? 'admin' : 'user';
+
+    users.push({ username, password, role });
     setUsers(users);
     // auto-login tras registro
-    storage.set(SESSION_KEY, { username });
+    storage.set(SESSION_KEY, { username, role });
     return { ok: true };
 }
 
@@ -59,7 +40,7 @@ export function login(username, password)
     const user = users.find(u => u.username === username && u.password === password);
     if (user)
     {
-        storage.set(SESSION_KEY, { username });
+        storage.set(SESSION_KEY, { username: user.username, role: user.role });
         return { ok: true };
     }
     return { ok: false, message: 'Usuario o contraseña incorrectos' };

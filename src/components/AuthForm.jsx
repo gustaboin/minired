@@ -5,6 +5,7 @@ export default function AuthForm({ onLogin, onRegister })
     const [mode, setMode] = useState('login'); // 'login' o 'register'
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [role, setRole] = useState('user'); // Nuevo estado para el checkbox
     const [error, setError] = useState('');
 
     function handleSubmit(e)
@@ -17,24 +18,31 @@ export default function AuthForm({ onLogin, onRegister })
         }
         if (mode === 'login')
         {
-            onLogin(username, password, setError);
+            onLogin(username, password, role, setError);
         } else
         {
-            onRegister(username, password, setError);
+            onRegister(username, password, role, setError);
         }
+
     }
+
+    const handleRoleChange = (e) =>
+    {
+        const newRole = e.target.checked ? 'admin' : 'user';
+        setRole(newRole);
+    };
 
     return (
         <div className="auth-form">
             <div className="auth-tabs">
                 <button
-                    className={mode === 'login' ? 'active' : ''}
+                    className={`btn ${mode === 'login' ? 'active' : ''}`}
                     onClick={() => setMode('login')}
                 >
                     Iniciar sesión
                 </button>
                 <button
-                    className={mode === 'register' ? 'active' : ''}
+                    className={`btn ${mode === 'register' ? 'active' : ''}`}
                     onClick={() => setMode('register')}
                 >
                     Registrarse
@@ -54,7 +62,21 @@ export default function AuthForm({ onLogin, onRegister })
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
-                <button type="submit">
+
+                {mode === 'register' && (
+                    <div className="admin-checkbox">
+                        <input
+                            type="checkbox"
+                            id="adminCheck"
+                            // El checkbox está marcado si el role actual es 'admin'
+                            checked={role === 'admin'}
+                            onChange={handleRoleChange} // Usa la nueva función
+                        />
+                        <label htmlFor="adminCheck">Registrar como Administrador</label>
+                    </div>
+                )}
+
+                <button className='btn' type="submit">
                     {mode === 'login' ? 'Entrar' : 'Crear cuenta'}
                 </button>
                 {error && <p className="error">{error}</p>}

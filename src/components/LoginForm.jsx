@@ -21,7 +21,7 @@ export default function LoginForm({ onLogin })
                 value={username}
                 onChange={e => setUsername(e.target.value)}
             />
-            <button type="submit">Entrar</button>
+            <button className='btn' type="submit">Entrar</button>
         </form>
     );
 }
