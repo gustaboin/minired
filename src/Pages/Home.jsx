@@ -7,6 +7,8 @@ import { getUser } from '../utils/auth.js';
 import { useNavigate } from 'react-router-dom';
 import { getPosts } from '../utils/posts.js';
 import ConfirmModal from '../components/ConfirmModal.jsx';
+import { clearPosts } from '../utils/posts.js';
+
 
 export default function Home()
 {
@@ -38,8 +40,8 @@ export default function Home()
 
     function confirmClearFeed()
     {
+        clearPosts();
         setEstados([]); // Borrar el feed
-
         setIsModalOpen(false);
     }
     // 3. Lógica para cerrar el modal si el usuario cancela

@@ -13,6 +13,10 @@ Ideal para practicar React Router, manejo de estado básico y persistencia local
 - ✅ **Crear, ver y borrar estados** (posts)
   ![alt text](images/image-2.png)
 - ✅ **Persistencia en LocalStorage**
+
+  Se agrego una nueva funcionalidad Rol de Usuario admin, este puede borrar todo el feed
+  ![alt text](images/image-3.png)
+
 - ✅ **Diseño responsive y sencillo**
 
 ---
