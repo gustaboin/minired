@@ -14,7 +14,7 @@ export default function Login()
         const result = register(username, password, role);
         if (result.ok)
         {
-            navigate('/');
+            navigate('/home');
         } else
         {
             setError(result.message);
@@ -26,7 +26,7 @@ export default function Login()
         const result = login(username, password);
         if (result.ok)
         {
-            navigate('/');
+            navigate('/home');
         } else
         {
             setError(result.message);

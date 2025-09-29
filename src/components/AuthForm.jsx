@@ -18,7 +18,7 @@ export default function AuthForm({ onLogin, onRegister })
         }
         if (mode === 'login')
         {
-            onLogin(username, password, role, setError);
+            onLogin(username, password, setError);
         } else
         {
             onRegister(username, password, role, setError);
